@@ -4,7 +4,7 @@ void main() {
   runApp(const MyApp());
 }
 
-// 🧓 Great-Grandparent
+// Great-Grandparent
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -26,7 +26,7 @@ class SignupPage extends StatefulWidget {
 }
 
 class _SignupPageState extends State<SignupPage> {
-  // 🔑 The Global Key - acts like a remote control for the form
+  // The Global Key - acts like a remote control for the form
   final _formKey = GlobalKey<FormState>();
   
   // 📝 Controllers to track what the user types
@@ -36,14 +36,14 @@ class _SignupPageState extends State<SignupPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold( // 👨 Parent
+    return Scaffold( // Parent
       appBar: AppBar(
         title: const Text('Join Us Today for the Cash Money!'),
         backgroundColor: Colors.purple,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Form( // 👶 Child
+        child: Form( // Child
           key: _formKey,
           child: Column(
             children: [
@@ -70,7 +70,7 @@ class _SignupPageState extends State<SignupPage> {
               ),
               const SizedBox(height: 16),
               
-              // 📧 Email Field
+              // Email Field
               TextFormField(
                 controller: _emailController,
                 decoration: const InputDecoration(
@@ -90,7 +90,7 @@ class _SignupPageState extends State<SignupPage> {
               ),
               const SizedBox(height: 16),
               
-              // 🔒 Password Field
+              // Password Field
               TextFormField(
                 controller: _passwordController,
                 obscureText: true,
@@ -111,7 +111,7 @@ class _SignupPageState extends State<SignupPage> {
               ),
               const SizedBox(height: 24),
               
-              // 🚀 Sign Up Button
+              // Sign Up Button
               ElevatedButton(
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
